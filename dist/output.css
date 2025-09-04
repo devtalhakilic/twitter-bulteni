@@ -170,9 +170,6 @@
   }
 }
 @layer utilities {
-  .bg-\[\#0a0a0a\] {
-    background-color: #0a0a0a;
-  }
   .text-center {
     text-align: center;
   }

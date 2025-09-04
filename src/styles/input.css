@@ -10,7 +10,7 @@
   @apply w-full min-h-[100vh] flex justify-center items-center flex-col gap-30 p-10;
 }
 .mainPage .text {
-  @apply text-center flex flex-col gap-5 w-1/2;
+  @apply text-center flex flex-col gap-5 lg:w-1/2 w-full;
 }
 .mainPage .text h1 {
   @apply text-5xl font-bold w-full;

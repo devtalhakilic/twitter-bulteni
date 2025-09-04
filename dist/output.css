@@ -17,8 +17,6 @@
     --font-weight-bold: 700;
     --radius-xl: 0.75rem;
     --radius-2xl: 1rem;
-    --default-transition-duration: 150ms;
-    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -199,10 +197,13 @@
 }
 .mainPage .text {
   display: flex;
-  width: calc(1/2 * 100%);
+  width: 100%;
   flex-direction: column;
   gap: calc(var(--spacing) * 5);
   text-align: center;
+  @media (width >= 64rem) {
+    width: calc(1/2 * 100%);
+  }
 }
 .mainPage .text h1 {
   width: 100%;

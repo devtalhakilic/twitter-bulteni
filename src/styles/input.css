@@ -7,16 +7,16 @@
 }
 
 .mainPage {
-  @apply w-full h-[100vh] flex justify-center items-center flex-col gap-30 pr-10 pb-10;
+  @apply w-full min-h-[100vh] flex justify-center items-center flex-col gap-30 p-10;
 }
 .mainPage .text {
   @apply text-center flex flex-col gap-5 w-1/2;
 }
 .mainPage .text h1 {
-  @apply text-5xl font-bold;
+  @apply text-5xl font-bold w-full;
 }
 .mainPage .text p {
-  @apply text-[#ffffffcb];
+  @apply text-[#ffffffcb] w-full;
 }
 
 .mainPage .lastTest {

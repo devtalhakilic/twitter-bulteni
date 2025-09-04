@@ -17,6 +17,8 @@
     --font-weight-bold: 700;
     --radius-xl: 0.75rem;
     --radius-2xl: 1rem;
+    --default-transition-duration: 150ms;
+    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -173,6 +175,9 @@
   .bg-\[\#0a0a0a\] {
     background-color: #0a0a0a;
   }
+  .text-center {
+    text-align: center;
+  }
   .text-white {
     color: var(--color-white);
   }
@@ -184,14 +189,13 @@
 }
 .mainPage {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: calc(var(--spacing) * 30);
-  padding-right: calc(var(--spacing) * 10);
-  padding-bottom: calc(var(--spacing) * 10);
+  padding: calc(var(--spacing) * 10);
 }
 .mainPage .text {
   display: flex;
@@ -201,12 +205,14 @@
   text-align: center;
 }
 .mainPage .text h1 {
+  width: 100%;
   font-size: var(--text-5xl);
   line-height: var(--tw-leading, var(--text-5xl--line-height));
   --tw-font-weight: var(--font-weight-bold);
   font-weight: var(--font-weight-bold);
 }
 .mainPage .text p {
+  width: 100%;
   color: #ffffffcb;
 }
 .mainPage .lastTest {

@@ -1,13 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
 @import "tailwindcss";
 
-* {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
 .mainPage {
-  @apply w-full min-h-[100vh] flex justify-center items-center flex-col gap-30 p-10;
+  @apply w-full min-h-[100vh] flex justify-center items-center flex-col gap-20 p-10;
   position: absolute;
   top: 0;
   left: 0;
@@ -16,12 +11,16 @@
 }
 .mainPage .text {
   @apply text-center flex flex-col gap-5 lg:w-1/2 w-full;
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
 }
 .mainPage .text h1 {
   @apply text-5xl font-bold w-full;
+  opacity: 0.8;
 }
 .mainPage .text p {
-  @apply text-[#ffffffcb] w-full;
+  @apply text-[#ffffffcb] w-full text-[19px];
 }
 
 .mainPage .lastTest {

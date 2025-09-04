@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+* {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.mainPage {
+  @apply w-full min-h-[100vh] flex justify-center items-center flex-col gap-30 p-10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+.mainPage .text {
+  @apply text-center flex flex-col gap-5 lg:w-1/2 w-full;
+}
+.mainPage .text h1 {
+  @apply text-5xl font-bold w-full;
+}
+.mainPage .text p {
+  @apply text-[#ffffffcb] w-full;
+}
+
+.mainPage .lastTest {
+  @apply lg:w-125 border border-[#262626] rounded-xl flex-col p-5 flex flex-col;
+  box-shadow: 0px 0px 5px -3px #fff;
+}
+
+.mainPage .lastTest .divTop {
+  @apply flex justify-between text-white w-full h-1/5 items-center;
+}
+
+.mainPage .lastTest .divTop h1 {
+  @apply text-2xl font-bold;
+}
+
+.mainPage .lastTest .divTop .currentTag {
+  @apply bg-green-700 text-white rounded-2xl text-[15px] p-2;
+}
+
+.mainPage .lastTest .divMain {
+  @apply text-[#ffffffc0] w-full mt-2 h-4/5 flex flex-col gap-3;
+}
+
+.mainPage .lastTest .divMain p {
+  @apply w-5/6;
+}
+
+/* .mainPage .lastTest .divMain .startButton{
+    @apply bg-blue-500 w-36 text-white rounded-2xl text-[15px] p-2 mt-5 cursor-pointer hover:bg-blue-600 duration-300;
+} */
+
+.cssbuttons-io-button {
+  background: #4f64ec;
+  color: white;
+  font-family: inherit;
+  padding: 0.35em;
+  padding-left: 1.2em;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em #714da6;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+  cursor: pointer;
+  width: 200px;
+  height: 50px;
+}
+
+.cssbuttons-io-button .icon {
+  background: white;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: #7b52b9;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+  transform: scale(0.95);
+}
+
+.light-rays-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  pointer-events: none;
+  z-index: -3;
+  overflow: hidden;
+}

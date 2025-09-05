@@ -10,7 +10,7 @@ function App() {
   return (
     <>
     <>
-<div style={{ width: '100%', height: '100vh', position: 'relative', backgroundColor: '#060010' }} className="light-rays-container">
+<div style={{ width: '100%', position: 'relative', backgroundColor: '#060010' }} className="light-rays-container">
   <LightRays
     raysOrigin="top-center"
     raysColor="#ffffff"
@@ -26,6 +26,8 @@ function App() {
     className="custom-rays"
   />
 </div>
+
+
     </>
 <section className="mainPage">
       <div className="text">
@@ -42,7 +44,7 @@ function App() {
           <h1>1. Hafta</h1>
           <div className="currentDiv">
             <div className="currentTag">
-              <span>Güncel</span>
+              <span>En Güncel</span>
             </div>
           </div>
         </div>
@@ -75,6 +77,10 @@ function App() {
         </div>
       </div>
     </section>
+
+    {/* <section className="archiveTests">
+
+    </section> */}
     </>
   )
 }

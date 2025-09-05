@@ -68,7 +68,7 @@
 }
 
 .questionContainer {
-  @apply flex w-full sm:w-[500px] lg:w-[700px] rounded-3xl flex-col items-center p-5 pb-15 gap-15 border-2 border-[#262626];
+  @apply flex w-full sm:w-[500px] lg:w-[700px] rounded-3xl flex-col items-center p-5 pb-15 gap-15 border-2 border-[#262626] mt-10;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -82,7 +82,7 @@
 }
 
 .questionContainer .questionImageContainer img {
-  @apply w-full h-[400px] rounded-2xl object-contain;
+  @apply w-full md:h-[400px] h-[250px]  rounded-2xl object-contain;
 }
 
 
@@ -94,7 +94,7 @@
 }
 
 .questionContainer .buttonsContainer {
-  @apply flex w-full items-center justify-around h-1/4;
+  @apply flex w-full items-center justify-around h-1/4 md:flex-row flex-col gap-10 md:gap-0 ;
 }
 
 .questionIndexContainer{
@@ -180,7 +180,7 @@
 }
 
 .questButton {
-  @apply md:w-[170px] lg:w-[240px];
+  @apply md:w-[170px] lg:w-[240px] w-full;
   color: white;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -222,24 +222,14 @@
 }
 
 .questionContainer .buttonsContainer button:nth-child(1) {
-  transform: rotate(-5deg) translateY(5px);
   box-shadow: 0 10px 0 #023a05;
   background-color: #02612d;
 }
 .questionContainer .buttonsContainer button:nth-child(2) {
-  transform: rotate(5deg) translateY(5px);
   box-shadow: 0 10px 0 #3b0202;
   background-color: #752910;
 }
 
-.questButton:hover {
-  transform: translateY(5px) rotate(0) !important;
-  padding-bottom: 0px;
-  outline: 0;
-}
-
-.questButton:active {
-  transform: translateY(5px) rotate(0) !important;
-  padding-bottom: 0px;
-  outline: 0;
+.questionContainer .buttonsContainer button:hover{
+  opacity: 0.8;
 }

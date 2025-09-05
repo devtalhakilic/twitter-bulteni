@@ -81,7 +81,7 @@ function Home() {
         </div>
       </section>
       <div className="archiveTextContainer">
-        <h2>Haftalık Test Arşivi</h2>
+        <h2>Eski Testler</h2>
       </div>
         <section className="archiveTests">
           {arsivQuizzes.map((quiz) => (

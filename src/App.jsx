@@ -10,7 +10,7 @@ function App() {
   return (
     <>
     <>
-<div style={{ width: '100%', position: 'relative', backgroundColor: '#060010' }} className="light-rays-container">
+<div style={{backgroundColor: '#060010' }} className="light-rays-container">
   <LightRays
     raysOrigin="top-center"
     raysColor="#ffffff"
@@ -78,9 +78,9 @@ function App() {
       </div>
     </section>
 
-    {/* <section className="archiveTests">
+    <section className="archiveTests">
 
-    </section> */}
+    </section>
     </>
   )
 }

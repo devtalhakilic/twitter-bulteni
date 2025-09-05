@@ -113,11 +113,13 @@
 }
 
 .light-rays-container {
-  @apply lg:h-[100vh] h-full;
-  width: 100%;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url("senin-bg.png") no-repeat center center / cover;
+  z-index: -1;
   pointer-events: none;
-  z-index: -3;
-  overflow: hidden;
 }
 

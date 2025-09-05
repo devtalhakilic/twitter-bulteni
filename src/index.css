@@ -113,7 +113,7 @@
 }
 
 .light-rays-container {
-  @apply min-h-[100vh] lg:h-[100vh];
+  @apply lg:h-[100vh] h-full;
   width: 100%;
   position: relative;
   pointer-events: none;

@@ -123,3 +123,6 @@
   pointer-events: none;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}

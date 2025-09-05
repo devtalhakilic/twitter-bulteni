@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import "tailwindcss";
 
 .mainPage {
   @apply w-full min-h-[100vh] flex justify-center items-center flex-col gap-20 p-10;
-  position: absolute;
   top: 0;
   left: 0;
   overflow: hidden;
@@ -23,34 +23,87 @@
   @apply text-[#ffffffcb] w-full text-[19px];
 }
 
-.mainPage .lastTest {
+.lastTest {
   @apply lg:w-125 border border-[#262626] rounded-xl flex-col p-5 flex gap-1;
   box-shadow: 0px 0px 5px -3px #fff;
 }
 
-.mainPage .lastTest .divTop {
+.lastTest .divTop {
   @apply flex justify-between text-white w-full h-1/5 items-center;
 }
 
-.mainPage .lastTest .divTop h1 {
+.lastTest .divTop h1 {
   @apply text-2xl font-bold;
 }
 
-.mainPage .lastTest .divTop .currentTag {
+.lastTest .divTop .currentTag {
   @apply bg-green-700 text-white rounded-2xl text-[15px] p-2;
 }
 
-.mainPage .lastTest .divMain {
+.lastTest .divMain {
   @apply text-[#ffffffc0] w-full mt-2 h-4/5 flex flex-col gap-4;
 }
 
-.mainPage .lastTest .divMain p {
+.lastTest .divMain p {
   @apply w-full;
 }
 
-.archiveTests{
-  @apply h-[250vh];
+.archiveTests {
+  @apply flex items-center justify-center flex-wrap gap-20 pb-10;
 }
+
+.archiveTextContainer{
+  @apply flex w-full justify-center items-center mb-12 mt-10;
+}
+
+.archiveTextContainer h2{
+  @apply  text-3xl lg:text-5xl font-bold text-white text-center;
+  opacity: 0.8;
+}
+
+/*Quiz Tasarımı*/
+
+.questionPage {
+  @apply flex w-full h-[100vh] justify-center items-center p-5;
+}
+
+.questionContainer {
+  @apply flex w-full sm:w-[500px] lg:w-[700px] rounded-3xl flex-col items-center p-5 pb-15 gap-15 border-2 border-[#262626];
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  box-shadow: 0px 0px 5px -3px #fff;
+  background-color: #0404046c;
+}
+
+.questionContainer .questionImageContainer {
+  @apply rounded-2xl;
+  box-shadow: 0px 0px 19px 5px #320145;
+}
+
+.questionContainer .questionImageContainer img {
+  @apply w-full h-[400px] rounded-2xl object-contain;
+}
+
+
+.questionContainer .text {
+  @apply flex items-center justify-center w-full font-bold;
+}
+.questionContainer .text p {
+  @apply text-xl sm:text-2xl text-white text-center;
+}
+
+.questionContainer .buttonsContainer {
+  @apply flex w-full items-center justify-around h-1/4;
+}
+
+.questionIndexContainer{
+  @apply w-full flex justify-center items-center text-white mt-5 text-2xl;
+}
+
+/* .questionContainer .buttonsContainer button {
+  @apply flex items-center justify-center font-bold;
+} */
 
 /* .mainPage .lastTest .divMain .startButton{
     @apply bg-blue-500 w-36 text-white rounded-2xl text-[15px] p-2 mt-5 cursor-pointer hover:bg-blue-600 duration-300;
@@ -118,11 +171,75 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: url("senin-bg.png") no-repeat center center / cover;
   z-index: -1;
   pointer-events: none;
 }
 
 ::-webkit-scrollbar {
   display: none;
+}
+
+.questButton {
+  @apply md:w-[170px] lg:w-[240px];
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bolder;
+  padding: 0;
+  border: none;
+  transform-origin: center;
+  text-decoration: none;
+  font-size: 15px;
+  cursor: pointer;
+  padding-bottom: 3px;
+  border-radius: 5px;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.questButton span {
+  display: block;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+}
+
+@media (max-width: 460px) {
+  .questButton span {
+    padding: 0.75rem 1.5rem;
+  }
+}
+@media (max-width: 400px) {
+  .questButton span {
+    padding: 0.5rem 1rem;
+  }
+}
+@media (max-width: 360px) {
+  .questButton{
+    font-size: 15px;
+  }
+  .questButton span {
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+.questionContainer .buttonsContainer button:nth-child(1) {
+  transform: rotate(-5deg) translateY(5px);
+  box-shadow: 0 10px 0 #023a05;
+  background-color: #02612d;
+}
+.questionContainer .buttonsContainer button:nth-child(2) {
+  transform: rotate(5deg) translateY(5px);
+  box-shadow: 0 10px 0 #3b0202;
+  background-color: #752910;
+}
+
+.questButton:hover {
+  transform: translateY(5px) rotate(0) !important;
+  padding-bottom: 0px;
+  outline: 0;
+}
+
+.questButton:active {
+  transform: translateY(5px) rotate(0) !important;
+  padding-bottom: 0px;
+  outline: 0;
 }

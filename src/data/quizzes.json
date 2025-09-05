@@ -1,0 +1,139 @@
+[
+  {
+    "id": 1,
+    "hafta": "Hafta 1",
+    "haftaAciklama": "hafta 1 aciklama",
+    "gorseller": [
+      {
+        "id": 1,
+        "yol": "https://i.hizliresim.com/ne84fkn.png",
+        "aciklama": "🤬Açıkçası sinirli gözüküyor... Fotoğrafta gösterilen yapay zekanın olayını gördün mü?"
+      },
+      {
+        "id": 2,
+        "yol": "/images/hafta1/gorsel2.jpg",
+        "aciklama": "Viral olan bu tweet'i hatırlıyor musun?"
+      },
+      {
+        "id": 3,
+        "yol": "/images/hafta1/gorsel3.jpg",
+        "aciklama": "Geçtiğimiz haftanın en çok retweet edilen görseli."
+      }
+    ]
+  },  
+    {
+    "id": 2,
+    "hafta": "Hafta 2",
+    "haftaAciklama": "hafta 2 aciklama",
+    "gorseller": [
+      {
+        "id": 1,
+        "yol": "https://i.hizliresim.com/ne84fkn.png",
+        "aciklama": "🤬Açıkçası sinirli gözüküyor... Fotoğrafta gösterilen yapay zekanın olayını gö123rdün mü?"
+      },
+      {
+        "id": 2,
+        "yol": "/images/hafta1/gorsel2.jpg",
+        "aciklama": "Viral olan bu tweet'i hatırlıyor musun?"
+      },
+      {
+        "id": 3,
+        "yol": "/images/hafta1/gorsel3.jpg",
+        "aciklama": "Geçtiğimiz haftanın en çok retweet edilen görseli."
+      }
+    ]
+  },
+    {
+    "id": 3,
+    "hafta": "Hafta 3",
+    "haftaAciklama": "hafta 3 aciklama",
+    "gorseller": [
+      {
+        "id": 1,
+        "yol": "https://i.hizliresim.com/ne84fkn.png",
+        "aciklama": "🤬Açıkçası sinirli gözüküyor... Fotoğrafta gösterilen yapay zekanın olayını gördün mü?"
+      },
+      {
+        "id": 2,
+        "yol": "/images/hafta1/gorsel2.jpg",
+        "aciklama": "Viral olan bu tweet'i hatırlıyor musun?"
+      },
+      {
+        "id": 3,
+        "yol": "/images/hafta1/gorsel3.jpg",
+        "aciklama": "Geçtiğimiz haftanın en çok retweet edilen görseli."
+      }
+    ]
+  },  
+    {
+    "id": 4,
+    "hafta": "Hafta 4",
+    "haftaAciklama": "hafta 4 aciklama",
+    "gorseller": [
+      {
+        "id": 1,
+        "yol": "https://i.hizliresim.com/ne84fkn.png",
+        "aciklama": "🤬Açıkçası sinirli gözüküyor... Fotoğrafta gösterilen yapay zekanın olayını gördün mü?"
+      },
+      {
+        "id": 2,
+        "yol": "/images/hafta1/gorsel2.jpg",
+        "aciklama": "Viral olan bu tweet'i hatırlıyor musun?"
+      },
+      {
+        "id": 3,
+        "yol": "/images/hafta1/gorsel3.jpg",
+        "aciklama": "Geçtiğimiz haftanın en çok retweet edilen görseli."
+      }
+    ]
+  },
+      {
+    "id": 5,
+    "hafta": "Hafta 5",
+    "haftaAciklama": "hafta 5 aciklama",
+    "gorseller": [
+      {
+        "id": 1,
+        "yol": "https://i.hizliresim.com/ne84fkn.png",
+        "aciklama": "🤬Açıkçası sinirli gözüküyor... Fotoğrafta gösterilen yapay zekanın olayını gördün mü?"
+      },
+      {
+        "id": 2,
+        "yol": "/images/hafta1/gorsel2.jpg",
+        "aciklama": "Viral olan bu tweet'i hatırlıyor musun?"
+      },
+      {
+        "id": 3,
+        "yol": "/images/hafta1/gorsel3.jpg",
+        "aciklama": "Geçtiğimiz haftanın en çok retweet edilen görseli."
+      }
+    ]
+  },
+        {
+    "id": 6,
+    "hafta": "Hafta 6",
+    "haftaAciklama": "Bu hafta gündemde aşure bayramı, Leman dergisinin Hz. Muhammed’i çizdiği iddiası ve komşusunun eşiyle olan seslerden şikâyetçi olan kadın vardı. ",
+    "gorseller": [
+      {
+        "id": 1,
+        "yol": "https://i.hizliresim.com/bdwrxdb.jpeg",
+        "aciklama": "Aşureli bu tweet bu hafta hit oldu? Bunu gördün mü?"
+      },
+      {
+        "id": 2,
+        "yol": "https://i.hizliresim.com/inalkwg.jpeg",
+        "aciklama": "Bir derginin yaptığı karikatür tepkiler çekti, bunu gördün mü?"
+      },
+      {
+        "id": 3,
+        "yol": "src/assets/foto3.jpeg",
+        "aciklama": "Komşularının çıkardığı garip seslerinden rahatsız olan kadının videosu hit oldu. Bunu gördün mü?"
+      },
+      {
+        "id": 3,
+        "yol": "src/assets/foto4.jpeg",
+        "aciklama": "Kütüphanedeki kitap raflarının görüntüsü topic konumuz oldu. Gördün mü?"
+      }
+    ]
+  }
+]

@@ -1,42 +1,55 @@
+import React from "react";
 import { Link } from "react-router-dom";
+import { useInView } from "react-intersection-observer";
 import LightRays from "./LightRays";
-import quizzesData from "./data/quizzes.json"; // Veriyi içeri aktarıyoruz
+import quizzesData from "./data/quizzes.json";
+import "animate.css"; // animate.css dosyanız
+import { Slide } from "react-awesome-reveal";
 
 function Home() {
-  // Veriyi en yeni id'den en eskiye doğru sırala
   const sortedQuizzes = [...quizzesData].sort((a, b) => b.id - a.id);
-
-  // En güncel testi al ve geri kalanları arşive at
-
   const enGuncelQuiz = sortedQuizzes[0];
   const arsivQuizzes = sortedQuizzes.slice(1);
 
+  // useInView hook'unu kullanarak animasyonları tetikliyoruz
+  const { ref: textRef, inView: textInView } = useInView({
+    threshold: 0, // Elementin %10'u ekrana girdiğinde tetikle
+  });
+
+  const { ref: lastTestRef, inView: lastTestInView } = useInView({
+    threshold: 0,
+  });
+
   return (
     <>
-      <>
-        <div
-          style={{ backgroundColor: "#060010" }}
-          className="light-rays-container"
-        >
-          <LightRays
-            raysOrigin="top-center"
-            raysColor="#ffffff"
-            raysSpeed={1.0}
-            lightSpread={0.5}
-            rayLength={3}
-            fadeDistance={1.0}
-            s
-            saturation={1.0}
-            followMouse={true}
-            mouseInfluence={0.1}
-            noiseAmount={0.0}
-            distortion={0.0}
-            className="custom-rays"
-          />
-        </div>
-      </>
+      <div
+        style={{ backgroundColor: "#060010" }}
+        className="light-rays-container"
+      >
+        <LightRays
+          raysOrigin="top-center"
+          raysColor="#ffffff"
+          raysSpeed={1.0}
+          lightSpread={0.5}
+          rayLength={3}
+          fadeDistance={1.0}
+          saturation={1.0}
+          followMouse={true}
+          mouseInfluence={0.1}
+          noiseAmount={0.0}
+          distortion={0.0}
+          className="custom-rays"
+        />
+      </div>
+
       <section className="mainPage">
-        <div className="text">
+        {/* Başlık ve paragraf için animasyon */}
+        <div
+          ref={textRef}
+          className={`text animate__animated ${
+            textInView ? "animate__fadeIn" : ""
+          }`}
+        >
           <h1 className="text-white text-center">Haftalık Twitter Bülteni</h1>
           <p>
             Haftalık Twitter bültenine hoş geldiniz! Gündemi, hit olmuş
@@ -45,7 +58,14 @@ function Home() {
             bir test sunuyorum. Bakalım kaçta kaç yapacaksın?
           </p>
         </div>
-        <div className="lastTest">
+
+        {/* En güncel test kartı için animasyon */}
+        <div
+          ref={lastTestRef}
+          className={`lastTest animate__animated ${
+            lastTestInView ? "animate__fadeIn" : ""
+          }`}
+        >
           <div className="divTop">
             <h1>{enGuncelQuiz.hafta}</h1>
             <div className="currentDiv">
@@ -80,12 +100,15 @@ function Home() {
           </div>
         </div>
       </section>
+
       <div className="archiveTextContainer">
         <h2>Eski Testler</h2>
       </div>
-        <section className="archiveTests">
-          {arsivQuizzes.map((quiz) => (
-            <div key={quiz.id} className="lastTest">
+
+      <section className="archiveTests">
+        {arsivQuizzes.map((quiz) => (
+          <Slide key={quiz.id} direction="up">
+            <div className="lastTest">
               <div className="divTop">
                 <h1>{quiz.hafta}</h1>
               </div>
@@ -114,8 +137,9 @@ function Home() {
                 </div>
               </div>
             </div>
-          ))}
-        </section>
+          </Slide>
+        ))}
+      </section>
     </>
   );
 }

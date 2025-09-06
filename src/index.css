@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
 @import "tailwindcss";
 
 .mainPage {
@@ -52,12 +53,12 @@
   @apply flex items-center justify-center flex-wrap gap-20 pb-10;
 }
 
-.archiveTextContainer{
+.archiveTextContainer {
   @apply flex w-full justify-center items-center mb-12 mt-10;
 }
 
-.archiveTextContainer h2{
-  @apply  text-3xl lg:text-5xl font-bold text-white text-center;
+.archiveTextContainer h2 {
+  @apply text-3xl lg:text-5xl font-bold text-white text-center;
   opacity: 0.8;
 }
 
@@ -85,7 +86,6 @@
   @apply w-full md:h-[400px] h-[250px]  rounded-2xl object-contain;
 }
 
-
 .questionContainer .text {
   @apply flex items-center justify-center w-full font-bold;
 }
@@ -94,11 +94,66 @@
 }
 
 .questionContainer .buttonsContainer {
-  @apply flex w-full items-center justify-around h-1/4 md:flex-row flex-col gap-10 md:gap-0 ;
+  @apply flex w-full items-center justify-around h-1/4 md:flex-row flex-col gap-10 md:gap-0;
 }
 
-.questionIndexContainer{
+.questionIndexContainer {
   @apply w-full flex justify-center items-center text-white mt-5 text-2xl;
+}
+
+.sonucContainer{
+  @apply flex justify-center items-center w-full h-[100vh];
+}
+
+.sonucCard{
+  @apply flex w-full sm:w-[500px] lg:w-[700px] rounded-3xl flex-col items-center p-5 pb-15 gap-15 border-2 border-[#262626] mt-10;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  box-shadow: 0px 0px 5px -3px #fff;
+  background-color: #0404046c;
+}
+
+.sonucCard .twitterPuan{
+  @apply flex flex-col text-white gap-10;
+}
+
+.sonucCard .twitterPuan h1{
+  @apply text-3xl inline-block;
+}
+.sonucCard .twitterPuan p{
+  @apply text-3xl border-b-green-600 border-b-2  text-green-600 inline-block;
+}
+
+.sonucCard .ekranSuresi{
+  @apply flex flex-col text-white gap-10;
+}
+
+.sonucCard .ekranSuresi h1{
+  @apply text-3xl;
+}
+.sonucCard .ekranSuresi p{
+  @apply text-3xl border-b-blue-600 border-b-2  text-blue-600 ;
+}
+
+.sonucCard .soruStats{
+  @apply text-3xl text-white mt-5;
+}
+
+.sonucCard .aciklama{
+  @apply flex w-full items-center justify-center text-center;
+}
+
+.sonucCard .yapimcininMesaji{
+  @apply flex flex-col text-white text-center gap-10 pr-5 pl-5;
+}
+
+.sonucCard .yapimcininMesaji h1{
+    @apply text-3xl;
+}
+
+.sonucCard .yapimcininMesaji .aciklama p{
+    @apply text-xl font-light italic border-b-white border-b pb-2;
 }
 
 /* .questionContainer .buttonsContainer button {
@@ -213,7 +268,7 @@
   }
 }
 @media (max-width: 360px) {
-  .questButton{
+  .questButton {
     font-size: 15px;
   }
   .questButton span {
@@ -230,6 +285,10 @@
   background-color: #752910;
 }
 
-.questionContainer .buttonsContainer button:hover{
+.questionContainer .buttonsContainer button:hover {
   opacity: 0.8;
+}
+
+.fastAnimation {
+  --animate-duration: 1s; /* Süreyi 4 saniye yaptık */
 }

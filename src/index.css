@@ -98,15 +98,15 @@
 }
 
 .questionIndexContainer {
-  @apply w-full flex justify-center items-center text-white mt-5 text-2xl;
+  @apply w-full flex flex-col gap-5 justify-center items-center text-white mt-5 text-2xl;
 }
 
 .sonucContainer{
-  @apply flex justify-center items-center w-full h-[100vh];
+  @apply flex justify-center items-center w-full min-h-screen flex-col p-10;
 }
 
 .sonucCard{
-  @apply flex w-full sm:w-[500px] lg:w-[700px] rounded-3xl flex-col items-center p-5 pb-15 gap-15 border-2 border-[#262626] mt-10;
+  @apply flex w-full sm:w-[500px] lg:w-[700px] rounded-3xl flex-col items-center p-5 pb-15 gap-10 border-2 border-[#262626] mt-10 text-center;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -119,10 +119,10 @@
 }
 
 .sonucCard .twitterPuan h1{
-  @apply text-3xl inline-block;
+  @apply sm:text-3xl text-2xl inline-block;
 }
 .sonucCard .twitterPuan p{
-  @apply text-3xl border-b-green-600 border-b-2  text-green-600 inline-block;
+  @apply text-2xl border-b-green-600 border-b-2  text-green-600 inline-block;
 }
 
 .sonucCard .ekranSuresi{
@@ -130,10 +130,10 @@
 }
 
 .sonucCard .ekranSuresi h1{
-  @apply text-3xl;
+  @apply sm:text-3xl text-2xl;
 }
 .sonucCard .ekranSuresi p{
-  @apply text-3xl border-b-blue-600 border-b-2  text-blue-600 ;
+  @apply text-2xl border-b-blue-600 border-b-2  text-blue-600 ;
 }
 
 .sonucCard .soruStats{
@@ -149,12 +149,59 @@
 }
 
 .sonucCard .yapimcininMesaji h1{
-    @apply text-3xl;
+    @apply sm:text-3xl text-2xl;
 }
 
 .sonucCard .yapimcininMesaji .aciklama p{
-    @apply text-xl font-light italic border-b-white border-b pb-2;
+    @apply text-[16px] font-light italic border-b-white border-b pb-2;
 }
+
+.sonucContainer .share {
+  @apply w-full justify-center items-center mt-5;
+}
+
+.sonucContainer .share .buttons{
+  @apply flex w-full justify-center items-center gap-10;
+}
+
+
+
+
+.shareButton {
+  /* Variables */
+  --button_radius: 0.75em;
+  --button_color: #e8e8e8;
+  --button_outline_color: #290230;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: var(--button_radius);
+  background: var(--button_outline_color);
+}
+
+.button_top {
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 0.75em 1.5em;
+  background: var(--button_color);
+  color: var(--button_outline_color);
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease;
+}
+
+.shareButton:hover .button_top {
+  /* Pull the button upwards when hovered */
+  transform: translateY(-0.33em);
+}
+
+.shareButton:active .button_top {
+  /* Push the button downwards when pressed */
+  transform: translateY(0);
+}
+
 
 /* .questionContainer .buttonsContainer button {
   @apply flex items-center justify-center font-bold;

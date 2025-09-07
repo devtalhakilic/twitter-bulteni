@@ -64,7 +64,7 @@ function Quiz() {
     console.log(currentQuestionIndex);
     console.log(userScore);
 
-    let userPuan = (100 / currentQuestionIndex) * userScore;
+    let userPuan = parseInt((100 / currentQuestionIndex) * userScore);
 
     if (userPuan == 100) {
       // 100 puan
@@ -147,7 +147,7 @@ function Quiz() {
           />
         </div>
 
-        <div className="sonucCard animate__animated ${animationClass} fastAnimation">
+        <div className="sonucCard animate__animated ${animationClass} animate_fadeInUp fastAnimation">
           <div className="twitterPuan">
             <h1>Twitter Dili ve Edebiyatı Puanın:</h1>
             <div className="aciklama">
@@ -171,6 +171,18 @@ function Quiz() {
               <span>{currentQuestionIndex}</span> Gündem Tweetin{" "}
               <span>{userScore}</span> tanesini biliyorsun.
             </p>
+          </div>
+        </div>
+        <div className="share">
+          <div className="buttons">
+            <button className="shareButton">
+              <Link className="inline-block" to={`/`}>
+              <span class="button_top"> Ana Sayfa </span>
+              </Link>
+            </button>
+            <button className="shareButton">
+              <span class="button_top"> Sonucu İndir </span>
+            </button>
           </div>
         </div>
       </div>
@@ -231,6 +243,9 @@ function Quiz() {
           <h1>
             {currentQuestionIndex + 1} / {quiz.gorseller.length}
           </h1>
+          <Link className="inline-block" to={`/`}>
+            <span class="button_top shareButton"> Ana Sayfa </span>
+          </Link>
         </div>
       </div>
     </div>
